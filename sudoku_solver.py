@@ -20,10 +20,7 @@ def sudoku(f):
 
     def ec(l):
         q = set(l) - {0}
-        for c in q:
-            if l.count(c) != 1:
-                return True
-        return False
+        return any(l.count(c) != 1 for c in q)
 
     P = print
     af(f)
